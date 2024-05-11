@@ -50,22 +50,22 @@ export const Status = () => {
         <ContactCard
           url="https://www.linkedin.com/in/richard-nomenjanahary-081b18221/"
           name="Richardé Nomenjanahary"
-          image="https://avatars.githubusercontent.com/u/102285256?v=4"
-          mediumImage="https://e7.pngegg.com/pngimages/1002/775/png-clipart-in-logo-linkedin-facebook-social-media-font-awesome-icon-linkedin-blue-text-thumbnail.png"
+          image="/image/me.png"
+          mediumImage="/image/logo_linkedin.png"
           description="Chat me for any inquiries"
         />
         <ContactCard
           url="https://join.skype.com/invite/HFeNbz6GUq6c"
           name="Richardé Nomenjanahary"
-          image="https://avatars.githubusercontent.com/u/102285256?v=4"
-          mediumImage="https://e7.pngegg.com/pngimages/372/330/png-clipart-skype-logo-skype-ico-icon-skype-icon-blue-text-thumbnail.png"
+          image="/image/me.png"
+          mediumImage="/image/logo_skype.png"
           description="Skype me for any inquiries"
         />
         <ContactCard
           url="mailto:richardetwilliam@gmail.com"
           name="Richardé Nomenjanahary"
-          image="https://avatars.githubusercontent.com/u/102285256?v=4"
-          mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/800px-Gmail_icon_%282020%29.svg.png"
+          image="/image/me.png"
+          mediumImage="/image/logo_gmail.png"
           description="Email me for any inquiries"
         />
         </Card>
@@ -134,14 +134,14 @@ const SIDE_PROJECTS: SideProjectProps[] = [
 
 const WORKS: WorkProps[] = [
   {
-    Logo: "https://avatars.githubusercontent.com/u/72074707?v=4",
+    Logo: "/image/logo_akata.png",
     title: "Akata Goavana",
     role: "Full Stack Developer",
     link: "https://www.akata-goavana.com",
     date: "2023 - present",
   },
   {
-    Logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEVHcEyyzDXD0jHSwi+qyTbQ1y3A0zG2zjSnyji8tTbQszHGxzKuzDbQ2C3LmjWozjfIQj3IVjvDbzvKhzfGazvHST3GMz/NsDTK1i/FHUHDAUPGLkDDEUPDB0MaLxULAAAAHnRSTlMAcXV1S9//////////1v+g0f8z/////9b////W1vt2TtbMAAAAy0lEQVR4AbXSRYLCQBBA0Wi10ky7DNz/mlThsSUfoi+edL+sH/q+HzGcTmucgXEhpVSMMa37JZ6ACWOkhDvq85+17hu9MYaMkIe4QI8JgCemGL/QhBAMGoZzSXRfZYurCty11pr49IV4AVaBEkLcMS4xJlPA4/6MtdaWe/6nUAitfVzQEqtRSoVordjipVIpUnYXE7aLjUImX+OpUBF3x3PuIthrbewIY2svdCuEQg/4id1mT4w9cFrj0wjPy89ksefqM5mGV/SB/bobDDUUWC9IAnsAAAAASUVORK5CYII=",
+    Logo: "/image/logo_d4win.png",
     title: "Digital4win",
     role: "Full Stack Developer",
     link: "https://www.digital4win.fr/",
@@ -149,14 +149,14 @@ const WORKS: WorkProps[] = [
     freelance: true,
   },
   {
-    Logo: "https://manao.eu/assets/images/logo_manao-footer.png",
+    Logo: "/image/logo_manao.png",
     title: "Manao Logiciel",
     role: "Full Stack Developer",
     link: "https://www.manao.eu",
     date: "2021",
   },
   {
-    Logo: "https://codeur-production.s3.eu-west-3.amazonaws.com/3ru0jmidgr8uq03zak1t5ecbtxwg",
+    Logo: "/image/logo_madigicom.jpeg",
     title: "MaDigiCom",
     role: "Full Stack Developer",
     link: "https://www.madigicom.io",

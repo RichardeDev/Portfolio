@@ -2,6 +2,7 @@ import React, { ComponentPropsWithoutRef } from "react";
 import { Section } from "./utils/Section";
 import Link from "next/link";
 import Code from "./utils/Code";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -15,10 +16,12 @@ export const Hero = () => {
           In 2020, I graduated with a master’s degree in computer science at
           Ecole Nationale d’Informatique of
           <Code className="inline-flex items-center gap-1">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/langfr-225px-Flag_of_Madagascar.svg.png"
+            <Image
+              src="/image/flag_Madagascar.png"
               style={{ width: 16, height: "auto" }}
               alt="Madagascar flag"
+              width={16}
+              height= {16}
             />{" "}
             Madagascar
           </Code>
@@ -26,10 +29,12 @@ export const Hero = () => {
           worked in different companies before, but I am working at
           <Link href="https://www.akata-goavana.com">
             <Code className="inline-flex items-center gap-1">
-              <img
-                src="https://avatars.githubusercontent.com/u/72074707?v=4"
+              <Image
+                src="/image/lofo_akata.png"
                 style={{ width: 16, height: "auto" }}
                 alt="logo Akata"
+                width={16}
+                height= {16}
               />{" "}
               Akata Goavana
             </Code>
@@ -47,10 +52,12 @@ export const Hero = () => {
         </p>
       </div>
       <div className="flex-1 max-md:m-auto ml-auto">
-        <img
-          src="https://avatars.githubusercontent.com/u/102285256?v=4"
+        <Image
+          src="/image/me.png"
           className="w-full h-auto rounded-full max-w-xs max-md:w-56" 
           alt="richarde's picture"
+          width={16}
+          height= {16}
         />
       </div>
     </Section>
