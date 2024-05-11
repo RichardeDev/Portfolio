@@ -79,7 +79,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     Logo: Code,
     title: "Personal Website",
     description: "A personal website built with Next.js, Typescript, shadcn and Tailwind CSS.",
-    link: "https://",
+    link: "/",
   },
   {
     Logo: StickyNote,
