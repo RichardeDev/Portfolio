@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="px-24">
+    <main >
       <Header />
       <Spacing size="md" />
       <Hero />  

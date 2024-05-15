@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /fr/*
+Disallow: /_next/*
+Disallow: /works-category
+Disallow: /author
+Disallow: /member
+Disallow: /search*
+Disallow: /*?s=*
+Sitemap: https://richardenomenjanahary.vercel.app
