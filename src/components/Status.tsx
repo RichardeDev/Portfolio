@@ -12,14 +12,14 @@ import {
   Wallet,
   Weight,
 } from "lucide-react";
-import { SideProjectProps, WorkProps } from "@/type/status-type";
+import { SideProjectProps, WorkProps, ContactProps } from "@/type/status-type";
 import SideProject from "./utils/status/SideProject";
 import WorkCard from "./utils/status/WorkCard";
 import ContactCard from "./utils/status/ContactCard";
 
 export const Status = () => {
   return (
-    <Section className="flex max-md:flex-col items-start gap-4">
+    <Section className="flex min-h-screen max-md:flex-col items-center gap-4 py-4" id="status">
       <div className="flex-[3] w-full">
         <Card className="p-4 w-full flex flex-col gap-2">
           <p className="text-lg text-muted-foreground">Side, fun project.</p>
@@ -47,45 +47,76 @@ export const Status = () => {
         </Card>
         <Card className="p-4 flex-1 flex flex-col gap-2">
           <p className="text-lg text-muted-foreground">Contact me</p>
-        <ContactCard
-          url="https://www.linkedin.com/in/richard-nomenjanahary-081b18221/"
-          name="Richardé Nomenjanahary"
-          image="https://avatars.githubusercontent.com/u/102285256?v=4"
-          mediumImage="https://e7.pngegg.com/pngimages/1002/775/png-clipart-in-logo-linkedin-facebook-social-media-font-awesome-icon-linkedin-blue-text-thumbnail.png"
-          description="Chat me for any inquiries"
-        />
-        <ContactCard
-          url="https://join.skype.com/invite/HFeNbz6GUq6c"
-          name="Richardé Nomenjanahary"
-          image="https://avatars.githubusercontent.com/u/102285256?v=4"
-          mediumImage="https://e7.pngegg.com/pngimages/372/330/png-clipart-skype-logo-skype-ico-icon-skype-icon-blue-text-thumbnail.png"
-          description="Skype me for any inquiries"
-        />
-        <ContactCard
-          url="mailto:richardetwilliam@gmail.com"
-          name="Richardé Nomenjanahary"
-          image="https://avatars.githubusercontent.com/u/102285256?v=4"
-          mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/800px-Gmail_icon_%282020%29.svg.png"
-          description="Email me for any inquiries"
-        />
+          <ContactCard
+            url="https://www.linkedin.com/in/richard-nomenjanahary-081b18221/"
+            name="Nomenjanahary Richardé"
+            image="https://media.licdn.com/dms/image/D4D03AQHw_it7HTgMsA/profile-displayphoto-shrink_800_800/0/1669186232438?e=1721260800&v=beta&t=2DlDK-H3g-z0tNVxxP1r4vsectK9O04u6IWjbZlJEgU"
+            mediumImage="https://e7.pngegg.com/pngimages/1002/775/png-clipart-in-logo-linkedin-facebook-social-media-font-awesome-icon-linkedin-blue-text-thumbnail.png"
+            description="Chat me for any inquiries"
+          />
+          <ContactCard
+            url="https://twitter.com/Richarde_dev"
+            name="@Richarde_dev"
+            image="https://avatars.githubusercontent.com/u/102285256?v=4"
+            mediumImage="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png"
+            description="twitte me for any inquiries"
+          />
+          <ContactCard
+            url="https://join.skype.com/invite/HFeNbz6GUq6c"
+            name="Richardé Nomenjanahary"
+            image="https://avatars.githubusercontent.com/u/102285256?v=4"
+            mediumImage="https://e7.pngegg.com/pngimages/372/330/png-clipart-skype-logo-skype-ico-icon-skype-icon-blue-text-thumbnail.png"
+            description="Skype me for any inquiries"
+          />
         </Card>
       </div>
     </Section>
   );
 };
 
+const CONTACT : ContactProps[] = [
+  {
+    url: "https://www.linkedin.com/in/richard-nomenjanahary-081b18221/",
+    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
+    mediumImage: "https://e7.pngegg.com/pngimages/1002/775/png-clipart-in-logo-linkedin-facebook-social-media-font-awesome-icon-linkedin-blue-text-thumbnail.png",
+    name: "Richardé Nomenjanahary",
+    description: "Chat me for any inquiries",
+  },
+  {
+    url: "https://twitter.com/Richarde_dev",
+    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
+    mediumImage: "https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png",
+    name: "@Richarde_dev",
+    description: "twitte me for any inquiries",
+  },
+  {
+    url: "https://join.skype.com/invite/HFeNbz6GUq6c",
+    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
+    mediumImage: "https://e7.pngegg.com/pngimages/372/330/png-clipart-skype-logo-skype-ico-icon-skype-icon-blue-text-thumbnail.png",
+    name: "Richardé Nomenjanahary",
+    description: "Skype me for any inquiries",
+  },
+  {
+    url: "mailto:richardetwilliam@gmail.com",
+    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
+    mediumImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/800px-Gmail_icon_%282020%29.svg.png",
+    name: "Richardé Nomenjanahary",
+    description: "Email me for any inquiries",
+  },
+]
+
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: Code,
     title: "Personal Website",
-    description: "A personal website built with Next.js, Typescript, shadcn and Tailwind CSS.",
+    description:
+      "A personal website built with Next.js, Typescript, shadcn and Tailwind CSS.",
     link: "/",
   },
   {
     Logo: StickyNote,
     title: "Akata Goavana",
-    description:
-      "A website built with Next.js, SCSS.",
+    description: "A website built with Next.js, SCSS.",
     link: "https://akata.goavana.com",
   },
   {
@@ -98,8 +129,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: MessageCircle,
     title: "D2BI",
-    description:
-      "A full-stack web application built with Vue.js and Node.js.",
+    description: "A full-stack web application built with Vue.js and Node.js.",
     link: "https://www.d2bi.fr",
   },
   {
@@ -119,15 +149,13 @@ const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: Bird,
     title: "Manao",
-    description:
-      "A website built HTML, CSS, JS and CodeIgniter PHP.",
+    description: "A website built HTML, CSS, JS and CodeIgniter PHP.",
     link: "https://manao.eu/",
   },
   {
     Logo: Wallet,
     title: "KalyPay",
-    description:
-      "A website built Wordpress PHP.",
+    description: "A website built Wordpress PHP.",
     link: "https://kalypay.com/",
   },
 ];
@@ -163,5 +191,3 @@ const WORKS: WorkProps[] = [
     date: "2020 - 2021",
   },
 ];
-
-

@@ -45,7 +45,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full dark">
       <head>
         <link rel="canonical" href={canonicalUrl} />
 

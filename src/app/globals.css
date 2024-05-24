@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --background: 216 13% 15%;
-    --foreground: 219 18% 71%;
+    --background: 216 13% 80%;
+    --foreground: 216 13% 15%;
     --muted: 216 12% 19%;
-    --muted-foreground: 216 12% 69%;
+    --muted-foreground: 216 12% 20%;
     --popover: 216 13% 12%;
     --popover-foreground: 219 18% 81%;
-    --card: 216 13% 13%;
-    --card-foreground: 219 18% 76%;
+    --card: 219 18% 71%;
+    --card-foreground: 219 45% 15%;
     --border: 216 3% 20%;
     --input: 216 3% 23%;
-    --primary: 219 18% 81%;
+    --primary: 219 18% 96%;
     --primary-foreground: 219 18% 21%;
     --secondary: 219 8% 25%;
     --secondary-foreground: 219 8% 85%;
@@ -56,5 +56,13 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+
+@layer components {
+  .active {
+    /* @apply font-bold bg-foreground text-background; */
+    @apply font-bold border-b-2 border-current;
   }
 }
