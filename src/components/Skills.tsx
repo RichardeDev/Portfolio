@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Section } from "./utils/Section";
 import { Badge } from "./ui/badge";
@@ -5,6 +6,7 @@ import { NodeJsIcon } from "./icons/NodeJsIcon";
 import { ReactJsIcon } from "./icons/ReactJsIcon";
 import { TailwindcssIcon } from "./icons/TailwindIcon";
 import Code from "./utils/Code";
+import { motion } from "framer-motion";
 
 export const Skills = () => {
   return (
@@ -13,12 +15,31 @@ export const Skills = () => {
       id="skills"
     >
       <div className="flex flex-col gap-8">
-        <Badge variant={"outline"} className="max-w-max">Skills</Badge>
-        <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        <motion.div 
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}>
+        <Badge variant={"outline"} className="max-w-max">
+          Skills
+        </Badge></motion.div>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+        >
           I love Working on ...
-        </h2>
+        </motion.h2>
         <div className="flex max-md:flex-col gap-4">
-          <div className="flex flex-col gap-2 flex-1">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-col gap-2 flex-1"
+          >
             <NodeJsIcon size={42} />
             <h3 className="text-2xl font-semibold tracking-tight">Node.js</h3>
             <p className="text-sm text-muted-foreground">
@@ -29,8 +50,14 @@ export const Skills = () => {
               JavaScript, making it ideal for fast and efficient development of
               web and backend applications
             </p>
-          </div>
-          <div className="flex flex-col gap-2 flex-1">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.7 }}
+            className="flex flex-col gap-2 flex-1"
+          >
             <ReactJsIcon
               size={42}
               className="animate-spin"
@@ -41,15 +68,21 @@ export const Skills = () => {
               My prefer framework is <Code>React</Code>. I also{" "}
               <Code>Next.js</Code> as a backend and frontend framework.
             </p>
-          </div>
-          <div className="flex flex-col gap-2 flex-1">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.9 }}
+            className="flex flex-col gap-2 flex-1"
+          >
             <TailwindcssIcon size={42} />
             <h3 className="text-2xl font-semibold tracking-tight">Tailwind</h3>
             <p className="text-sm text-muted-foreground">
               I can create <u>beautefull</u> application <i>in second</i> using{" "}
               <Code>Tailwind css</Code>.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </Section>

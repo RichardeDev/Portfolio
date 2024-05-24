@@ -14,22 +14,27 @@ export const Hero = () => {
     >
       <div className="flex-[3] flex flex-col gap-8">
         <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{opacity: 0, y: -50}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{ delay: 0.7}}
           className="font-caption text-5xl text-primary font-bold"
         >
           Richardé Nomenjanahary
         </motion.h2>
         <motion.h3
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{once: true}}
+          transition={{ delay: 0.5}}
           className="font-caption text-3xl"
         >
           Software Engineer
         </motion.h3>
         <motion.div
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3}}
           className=""
           style={{ textAlign: "justify" }}
         >
@@ -70,8 +75,10 @@ export const Hero = () => {
         </motion.div>
       </div>
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{opacity: 1, x: 0}}
+        viewport={{once: true}}
+        transition={{ delay: 0.7}}
         className="flex-[2] flex flex-col items-center max-sm:m-auto ml-auto"
       >
         <img
