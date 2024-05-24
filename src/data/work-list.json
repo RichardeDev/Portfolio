@@ -1,0 +1,31 @@
+[
+    {
+      "Logo": "https://avatars.githubusercontent.com/u/72074707?v=4",
+      "title": "Akata Goavana",
+      "role": "Full Stack Developer",
+      "link": "https://www.akata-goavana.com",
+      "date": "2023 - present"
+    },
+    {
+      "Logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEVHcEyyzDXD0jHSwi+qyTbQ1y3A0zG2zjSnyji8tTbQszHGxzKuzDbQ2C3LmjWozjfIQj3IVjvDbzvKhzfGazvHST3GMz/NsDTK1i/FHUHDAUPGLkDDEUPDB0MaLxULAAAAHnRSTlMAcXV1S9//////////1v+g0f8z/////9b////W1vt2TtbMAAAAy0lEQVR4AbXSRYLCQBBA0Wi10ky7DNz/mlThsSUfoi+edL+sH/q+HzGcTmucgXEhpVSMMa37JZ6ACWOkhDvq85+17hu9MYaMkIe4QI8JgCemGL/QhBAMGoZzSXRfZYurCty11pr49IV4AVaBEkLcMS4xJlPA4/6MtdaWe/6nUAitfVzQEqtRSoVordjipVIpUnYXE7aLjUImX+OpUBF3x3PuIthrbewIY2svdCuEQg/4id1mT4w9cFrj0wjPy89ksefqM5mGV/SB/bobDDUUWC9IAnsAAAAASUVORK5CYII=",
+      "title": "Digital4win",
+      "role": "Full Stack Developer",
+      "link": "https://www.digital4win.fr/",
+      "date": "2021 - 2023",
+      "freelance": true
+    },
+    {
+      "Logo": "https://manao.eu/assets/images/logo_manao-footer.png",
+      "title": "Manao Logiciel",
+      "role": "Full Stack Developer",
+      "link": "https://www.manao.eu",
+      "date": "2021"
+    },
+    {
+      "Logo": "https://codeur-production.s3.eu-west-3.amazonaws.com/3ru0jmidgr8uq03zak1t5ecbtxwg",
+      "title": "MaDigiCom",
+      "role": "Full Stack Developer",
+      "link": "https://www.madigicom.io",
+      "date": "2020 - 2021"
+    }
+  ]

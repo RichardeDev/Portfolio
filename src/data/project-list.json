@@ -1,0 +1,54 @@
+[
+    {
+      "Logo": "Code",
+      "title": "Personal Website",
+      "description":
+        "A personal website built with Next.js, Typescript, shadcn and Tailwind CSS.",
+      "link": "/"
+    },
+    {
+      "Logo": "StickyNote",
+      "title": "Akata Goavana",
+      "description": "A website built with Next.js, SCSS.",
+      "link": "https://akata.goavana.com"
+    },
+    {
+      "Logo": "Rss",
+      "title": "Ge-gestion",
+      "description":
+        "A full-stack web application built with Angular.js, DevUi, and Node.js.",
+      "link": "https://dev.olombelona.goavana.com/"
+    },
+    {
+      "Logo": "MessageCircle",
+      "title": "D2BI",
+      "description": "A full-stack web application built with Vue.js and Node.js.",
+      "link": "https://www.d2bi.fr"
+    },
+    {
+      "Logo": "Plane",
+      "title": "Indemniflight",
+      "description":
+        "A full-stack web application built with WordPres, SCSS, AppScript and Node.js.",
+      "link": "https://www.indemniflight.com"
+    },
+    {
+      "Logo": "Heart",
+      "title": "Digital4win",
+      "description":
+        "A full-stack web application built with React.js, Material UI, Graphql, Typescript and Node.js.",
+      "link": "https://d4win.fr/"
+    },
+    {
+      "Logo": "Bird",
+      "title": "Manao",
+      "description": "A website built HTML, CSS, JS and CodeIgniter PHP.",
+      "link": "https://manao.eu/"
+    },
+    {
+      "Logo": "Wallet",
+      "title": "KalyPay",
+      "description": "A website built Wordpress PHP.",
+      "link": "https://kalypay.com/"
+    }
+  ]
