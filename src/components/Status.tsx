@@ -6,6 +6,7 @@ import {
   Bird,
   Code,
   Heart,
+  LucideIcon,
   MessageCircle,
   Plane,
   Rss,
@@ -18,8 +19,23 @@ import SideProject from "./utils/status/SideProject";
 import WorkCard from "./utils/status/WorkCard";
 import ContactCard from "./utils/status/ContactCard";
 import { motion } from "framer-motion";
+import ProjectsData from "@/data/project-list.json";
+import ContactData from "@/data/contact-list.json";
+import WorksData from "@/data/work-list.json";
+
+const iconMap: { [key: string]: LucideIcon } = {
+  Code,
+  StickyNote,
+  Rss,
+  MessageCircle,
+  Plane,
+  Heart,
+  Bird,
+  Wallet,
+};
 
 export const Status = () => {
+  const contactList = ContactData?.slice(0, 3);
   return (
     <Section
       className="flex min-h-screen max-md:flex-col items-center gap-4 py-4"
@@ -35,15 +51,18 @@ export const Status = () => {
         <Card className="p-4 w-full flex flex-col gap-2">
           <p className="text-lg text-muted-foreground">Side, fun project.</p>
           <div className="flex flex-col gap-4">
-            {SIDE_PROJECTS.map((project, index) => (
-              <SideProject
-                key={index}
-                Logo={project.Logo}
-                title={project.title}
-                description={project.description}
-                link={project.link}
-              />
-            ))}
+            {ProjectsData.map((project, index) => {
+              const IconComponent = iconMap[project.Logo];
+              return (
+                <SideProject
+                  key={index}
+                  Logo={IconComponent}
+                  title={project.title}
+                  description={project.description}
+                  link={project.link}
+                />
+              );
+            })}
           </div>
         </Card>
       </motion.div>
@@ -57,7 +76,7 @@ export const Status = () => {
           <Card className="p-4 flex-1">
             <p className="text-lg text-muted-foreground">Work</p>
             <div className="flex flex-col gap-4">
-              {WORKS.map((work, index) => (
+              {WorksData.map((work, index) => (
                 <WorkCard key={index} {...work} />
               ))}
             </div>
@@ -71,27 +90,16 @@ export const Status = () => {
         >
           <Card className="p-4 flex-1 flex flex-col gap-2">
             <p className="text-lg text-muted-foreground">Contact me</p>
-            <ContactCard
-              url="https://www.linkedin.com/in/richard-nomenjanahary-081b18221/"
-              name="Nomenjanahary Richardé"
-              image="https://media.licdn.com/dms/image/D4D03AQHw_it7HTgMsA/profile-displayphoto-shrink_800_800/0/1669186232438?e=1721260800&v=beta&t=2DlDK-H3g-z0tNVxxP1r4vsectK9O04u6IWjbZlJEgU"
-              mediumImage="https://e7.pngegg.com/pngimages/1002/775/png-clipart-in-logo-linkedin-facebook-social-media-font-awesome-icon-linkedin-blue-text-thumbnail.png"
-              description="Chat me for any inquiries"
-            />
-            <ContactCard
-              url="https://twitter.com/Richarde_dev"
-              name="@Richarde_dev"
-              image="https://avatars.githubusercontent.com/u/102285256?v=4"
-              mediumImage="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png"
-              description="twitte me for any inquiries"
-            />
-            <ContactCard
-              url="https://join.skype.com/invite/HFeNbz6GUq6c"
-              name="Richardé Nomenjanahary"
-              image="https://avatars.githubusercontent.com/u/102285256?v=4"
-              mediumImage="https://e7.pngegg.com/pngimages/372/330/png-clipart-skype-logo-skype-ico-icon-skype-icon-blue-text-thumbnail.png"
-              description="Skype me for any inquiries"
-            />
+            {contactList?.map((contact, index) => (
+              <ContactCard
+                key={index}
+                url={contact.url}
+                name={contact.name}
+                image={contact.image}
+                mediumImage={contact.mediumImage}
+                description={contact.description}
+              />
+            ))}
           </Card>
         </motion.div>
       </div>
@@ -99,124 +107,3 @@ export const Status = () => {
   );
 };
 
-const CONTACT: ContactProps[] = [
-  {
-    url: "https://www.linkedin.com/in/richard-nomenjanahary-081b18221/",
-    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
-    mediumImage:
-      "https://e7.pngegg.com/pngimages/1002/775/png-clipart-in-logo-linkedin-facebook-social-media-font-awesome-icon-linkedin-blue-text-thumbnail.png",
-    name: "Richardé Nomenjanahary",
-    description: "Chat me for any inquiries",
-  },
-  {
-    url: "https://twitter.com/Richarde_dev",
-    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
-    mediumImage:
-      "https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png",
-    name: "@Richarde_dev",
-    description: "twitte me for any inquiries",
-  },
-  {
-    url: "https://join.skype.com/invite/HFeNbz6GUq6c",
-    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
-    mediumImage:
-      "https://e7.pngegg.com/pngimages/372/330/png-clipart-skype-logo-skype-ico-icon-skype-icon-blue-text-thumbnail.png",
-    name: "Richardé Nomenjanahary",
-    description: "Skype me for any inquiries",
-  },
-  {
-    url: "mailto:richardetwilliam@gmail.com",
-    image: "https://avatars.githubusercontent.com/u/102285256?v=4",
-    mediumImage:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/800px-Gmail_icon_%282020%29.svg.png",
-    name: "Richardé Nomenjanahary",
-    description: "Email me for any inquiries",
-  },
-];
-
-const SIDE_PROJECTS: SideProjectProps[] = [
-  {
-    Logo: Code,
-    title: "Personal Website",
-    description:
-      "A personal website built with Next.js, Typescript, shadcn and Tailwind CSS.",
-    link: "/",
-  },
-  {
-    Logo: StickyNote,
-    title: "Akata Goavana",
-    description: "A website built with Next.js, SCSS.",
-    link: "https://akata.goavana.com",
-  },
-  {
-    Logo: Rss,
-    title: "Ge-gestion",
-    description:
-      "A full-stack web application built with Angular.js, DevUi, and Node.js.",
-    link: "https://dev.olombelona.goavana.com/",
-  },
-  {
-    Logo: MessageCircle,
-    title: "D2BI",
-    description: "A full-stack web application built with Vue.js and Node.js.",
-    link: "https://www.d2bi.fr",
-  },
-  {
-    Logo: Plane,
-    title: "Indemniflight",
-    description:
-      "A full-stack web application built with WordPres, SCSS, AppScript and Node.js.",
-    link: "https://www.indemniflight.com",
-  },
-  {
-    Logo: Heart,
-    title: "Digital4win",
-    description:
-      "A full-stack web application built with React.js, Material UI, Graphql, Typescript and Node.js.",
-    link: "https://d4win.fr/",
-  },
-  {
-    Logo: Bird,
-    title: "Manao",
-    description: "A website built HTML, CSS, JS and CodeIgniter PHP.",
-    link: "https://manao.eu/",
-  },
-  {
-    Logo: Wallet,
-    title: "KalyPay",
-    description: "A website built Wordpress PHP.",
-    link: "https://kalypay.com/",
-  },
-];
-
-const WORKS: WorkProps[] = [
-  {
-    Logo: "https://avatars.githubusercontent.com/u/72074707?v=4",
-    title: "Akata Goavana",
-    role: "Full Stack Developer",
-    link: "https://www.akata-goavana.com",
-    date: "2023 - present",
-  },
-  {
-    Logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEVHcEyyzDXD0jHSwi+qyTbQ1y3A0zG2zjSnyji8tTbQszHGxzKuzDbQ2C3LmjWozjfIQj3IVjvDbzvKhzfGazvHST3GMz/NsDTK1i/FHUHDAUPGLkDDEUPDB0MaLxULAAAAHnRSTlMAcXV1S9//////////1v+g0f8z/////9b////W1vt2TtbMAAAAy0lEQVR4AbXSRYLCQBBA0Wi10ky7DNz/mlThsSUfoi+edL+sH/q+HzGcTmucgXEhpVSMMa37JZ6ACWOkhDvq85+17hu9MYaMkIe4QI8JgCemGL/QhBAMGoZzSXRfZYurCty11pr49IV4AVaBEkLcMS4xJlPA4/6MtdaWe/6nUAitfVzQEqtRSoVordjipVIpUnYXE7aLjUImX+OpUBF3x3PuIthrbewIY2svdCuEQg/4id1mT4w9cFrj0wjPy89ksefqM5mGV/SB/bobDDUUWC9IAnsAAAAASUVORK5CYII=",
-    title: "Digital4win",
-    role: "Full Stack Developer",
-    link: "https://www.digital4win.fr/",
-    date: "2021 - 2023",
-    freelance: true,
-  },
-  {
-    Logo: "https://manao.eu/assets/images/logo_manao-footer.png",
-    title: "Manao Logiciel",
-    role: "Full Stack Developer",
-    link: "https://www.manao.eu",
-    date: "2021",
-  },
-  {
-    Logo: "https://codeur-production.s3.eu-west-3.amazonaws.com/3ru0jmidgr8uq03zak1t5ecbtxwg",
-    title: "MaDigiCom",
-    role: "Full Stack Developer",
-    link: "https://www.madigicom.io",
-    date: "2020 - 2021",
-  },
-];
