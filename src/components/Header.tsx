@@ -167,6 +167,7 @@ export const Header = () => {
           </div>
         )}
       </motion.header>
+      <hr />
 
       {isAnimating && (
         <motion.div
